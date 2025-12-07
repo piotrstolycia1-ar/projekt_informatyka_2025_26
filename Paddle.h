@@ -14,13 +14,18 @@ public:
 	void ruch(sf::Vector2f windowWidth, float dt);  //metoda odpowiadajaca za sterowanie paletka, prawo lewo
 
 	//Tworzymy tzw gettery, Gettery to okienko na œwiat – pozwalasz innym obiektom zobaczyæ tylko to, co im potrzebne, bez grzebania w œrodku.
-	sf::Vector2f gettPosition() 
+	sf::Vector2f gettPosition() const
 	{ 
 		return ksztalt.getPosition();
 	}
-	sf::Vector2f gettSize() 
+	sf::Vector2f gettSize() const
 	{
 		return ksztalt.getSize();
+	}
+	//setter
+	void setPosition(const sf::Vector2f& pos)
+	{
+		ksztalt.setPosition(pos);
 	}
 
 };

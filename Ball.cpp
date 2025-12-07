@@ -57,7 +57,7 @@ void Ball::ruch(sf::Vector2f windowSize, sf::Vector2f paddlePos, sf::Vector2f pa
     {
         predkosc.y = -predkosc.y; // pi³ka leci w górê
         ksztalt.setPosition(pos.x, (paddlePos.y - paddleSize.y / 2.f) - r - 0.1f); // popraw pozycjê, ¿eby siê nie klei³a
-        cout << "Punkt!\n";
+        cout << "Odbicie!\n";
     }
 }
 

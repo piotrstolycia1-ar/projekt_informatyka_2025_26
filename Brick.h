@@ -4,7 +4,7 @@
 #include <iostream>
 
 
-class Brick : public sf::RectangleShape //dziedziczenie
+class Brick : public sf::RectangleShape //dziedziczenie po rectangleShape
 {
 	private:
 		int punktyZycia; //od 0 do 3, gdy 0 to nie istnieje
@@ -26,7 +26,16 @@ class Brick : public sf::RectangleShape //dziedziczenie
 		void draw(sf::RenderTarget &window);
 
 		//getter
-		bool czyZniszczony() { return jestZniszczony; }
+		bool czyZniszczony() const
+		{ 
+			return jestZniszczony;
+		}
+
+		//getter podtrzebny do zadania z zapisem, (gameState)
+		int getHP() const
+		{
+			return punktyZycia;
+		}
 
 };
 
