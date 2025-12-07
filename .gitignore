@@ -1,0 +1,20 @@
+# Visual Studio
+.vs/
+*.db
+
+# Katalogi kompilacji
+Debug/
+Release/
+x64/
+x86/
+
+# Pliki kompilatora
+*.obj
+*.pch
+*.pdb
+*.ilk
+*.log
+*.tlog
+
+# Pliki wykonywalne
+*.exe
