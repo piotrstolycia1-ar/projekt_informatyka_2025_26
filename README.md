@@ -1,2 +1,2 @@
 Autor: Piotr Stołycia
-Temat: Obsługa GitHub 
+Informacja: Opis gry i jej elementy zawarte w pliku .pdf ze względu na lepszą możliwosć edycji. 
