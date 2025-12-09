@@ -128,23 +128,33 @@
   <ItemGroup>
     <ClCompile Include="Ball.cpp" />
     <ClCompile Include="Brick.cpp" />
+    <ClCompile Include="CollisionManager.cpp" />
     <ClCompile Include="DiffMenu.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameOverManager.cpp" />
     <ClCompile Include="GameState.cpp" />
+    <ClCompile Include="LevelManager.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Paddle.cpp" />
     <ClCompile Include="pierwszySFML.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="SaveManager.cpp" />
+    <ClCompile Include="WinManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ball.h" />
     <ClInclude Include="Brick.h" />
+    <ClInclude Include="CollisionManager.h" />
     <ClInclude Include="DiffMenu.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GameOverManager.h" />
     <ClInclude Include="GameState.h" />
+    <ClInclude Include="LevelManager.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Paddle.h" />
+    <ClInclude Include="SaveManager.h" />
+    <ClInclude Include="WinManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

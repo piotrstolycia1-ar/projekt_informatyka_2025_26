@@ -84,4 +84,39 @@ void myDelay(int opoznienie)
 	}	
 }
 
+//przeniesienie funkcjonalnosci z game.cpp
+int Menu::run(sf::RenderWindow& window)
+{
+	int selected = -1;
 
+	while (window.isOpen() && selected == -1)
+	{
+		sf::Event event;
+		while (window.pollEvent(event))
+		{
+			if (event.type == sf::Event::Closed)
+				window.close();
+
+			if (event.type == sf::Event::KeyPressed)
+			{
+				if (event.key.code == sf::Keyboard::Up)
+					przesunG();
+
+				if (event.key.code == sf::Keyboard::Down)
+					przesunD();
+
+				if (event.key.code == sf::Keyboard::Enter)
+				{
+					selected = getSelectedItem();
+					return selected;
+				}
+			}
+		}
+
+		window.clear();
+		draw(window);
+		window.display();
+	}
+
+	return selected;
+}

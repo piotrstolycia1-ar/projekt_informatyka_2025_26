@@ -18,5 +18,6 @@ public:
 	void przesunG();//przesun do gory
 	void przesunD();//przesun w dol
 	int getSelectedItem() { return selectedItem; }//zwroc poziom menu
+	int run(sf::RenderWindow& window);
 	void draw(sf::RenderWindow &window);//rysuj menu w oknie
 };

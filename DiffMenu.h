@@ -6,17 +6,18 @@
 //Klasa do stopnia trudnosci. Diff-difficulty
 class DiffMenu
 {
-public:
-    DiffMenu(float width, float height);
+    private:
+        int selected;
+        sf::Font font;
+        std::vector<sf::Text> options;
+    public:
+        DiffMenu(float width, float height);
 
-    void draw(sf::RenderWindow& window);
-    void moveUp();
-    void moveDown();
-    int getSelected() const { return selected; }
+        void draw(sf::RenderWindow& window);
+        void moveUp();
+        void moveDown();
+        int getSelected() const { return selected; }
+        int run(sf::RenderWindow& window);
 
-private:
-    int selected;
-    sf::Font font;
-    std::vector<sf::Text> options;
 };
 

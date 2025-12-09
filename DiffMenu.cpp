@@ -43,3 +43,36 @@ void DiffMenu::moveDown()
     selected = (selected + 1) % options.size();
     options[selected].setFillColor(sf::Color::Yellow);
 }
+
+//przeniesienie funkcjonalnosci z game.cpp
+int DiffMenu::run(sf::RenderWindow& window)
+{
+    while (window.isOpen())
+    {
+        sf::Event event;
+        while (window.pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+                window.close();
+
+            if (event.type == sf::Event::KeyPressed)
+            {
+                if (event.key.code == sf::Keyboard::Up)
+                    moveUp();
+
+                if (event.key.code == sf::Keyboard::Down)
+                    moveDown();
+
+                if (event.key.code == sf::Keyboard::Enter)
+                    return getSelected() + 1; 
+            }
+        }
+
+        window.clear();
+        draw(window);
+        window.display();
+    }
+
+    // domyœlnie poziom œredni
+    return 2;
+}

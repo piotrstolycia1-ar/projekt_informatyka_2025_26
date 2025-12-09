@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 
-//tutaj dzialanie metody capture, klasy gameState
+//tutaj dzialanie metody capture, klasy gameState, zap;is
 
 void gameState::capture(const Paddle& p, const Ball& b, const std::vector<Brick>& bloki, int currentScore) // nazwy lokalne dla metody p b bloki
 {
